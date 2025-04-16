@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "STG - Case de avaliação Salesforce",
+  "namespace": "",
+  "sfdcLoginUrl": "https://playful-panda-81o2x-dev-ed.trailblaze.lightning.force.com",
+  "sourceApiVersion": "63.0"
+}
