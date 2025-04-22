@@ -1,0 +1,3 @@
+<aura:component implements="lightning:actionOverride,force:lightningQuickAction" access="global">
+    <c:leadForm />
+</aura:component>

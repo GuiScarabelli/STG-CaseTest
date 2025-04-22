@@ -1,0 +1,85 @@
+<template>
+  <lightning-card title="Criar Novo Lead" icon-name="standard:lead">
+      <div class="slds-p-around_medium">
+          <lightning-record-edit-form object-api-name="Lead" onsuccess={handleSuccess} onsubmit={handleSubmit} onerror={handleError}>
+              <lightning-accordion active-section-name={guiasAbertas}>
+                  <lightning-accordion-section name="informacoesBasicas" label="Informações Básicas">
+                      <div class="slds-grid slds-wrap">
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="FirstName" required></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="LastName" required></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Company" required></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Status"></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                            <lightning-input-field field-name="CNPJ__c" value={cnpj} required onchange={handleCnpjChange}></lightning-input-field>
+                        </div>
+
+                          <div class="slds-col slds-size_1-of-2">
+                            <lightning-input-field field-name="Title"></lightning-input-field>
+                        </div>
+
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input field-name="RazaoSocial__c" label="Razão Social" value={razaoSocial} readonly></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input field-name="NomeFantasia__c" label="Nome Fantasia" value={nomeFantasia} readonly></lightning-input>
+                            </div>
+                      </div>
+                  </lightning-accordion-section>
+                  <lightning-accordion-section name="informacoesContato" label="Informações de Contato">
+                      <div class="slds-grid slds-wrap">
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Phone"></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Email"></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Website"></lightning-input-field>
+                          </div>
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Title"></lightning-input-field>
+                          </div>
+                      </div>
+                  </lightning-accordion-section>
+                  <lightning-accordion-section name="informacoesEndereco" label="Endereço">
+                      <div class="slds-grid slds-wrap">
+                          <div class="slds-col slds-size_1-of-2">
+                              <lightning-input-field field-name="Address"></lightning-input-field>
+                          </div>
+                      </div>
+                  </lightning-accordion-section>
+                  <lightning-accordion-section name="informacoesAdicionais" label="Informações Adicionais">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input-field field-name="LeadSource"></lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                          <lightning-input-field field-name="Industry"></lightning-input-field>
+                      </div>
+                      <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="LeadSource"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                      <lightning-input-field field-name="AnnualRevenue"></lightning-input-field>
+                  </div>
+                  <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="NumberOfEmployees"></lightning-input-field>
+                </div>
+                    </div>
+                </lightning-accordion-section>
+              </lightning-accordion>
+              <div class="slds-m-top_medium">
+                  <lightning-button class="slds-align_absolute-center" variant="brand" type="submit" label="Criar Lead"></lightning-button>
+              </div>
+          </lightning-record-edit-form>
+      </div>
+  </lightning-card>
+</template>

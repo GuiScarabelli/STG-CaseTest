@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Alocar Desenvolvedores">
+      <lightning-datatable
+          key-field="Id"
+          data={developers}
+          columns={columns}
+          onrowselection={handleRowSelection}
+      ></lightning-datatable>
+      <lightning-button variant="brand" type="submit" label="Salvar Alocações" onclick={handleSave} class="slds-m-bottom_small"></lightning-button>
+  </lightning-card>
+</template>
